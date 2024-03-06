@@ -61,3 +61,28 @@ body{
       transform: rotate(360deg);
   }
 }
+/* QR COMPONENT */
+.qr-container{
+  background-color: rgb(124, 110, 248);
+  width: 520px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgb(99, 99, 99);
+}
+.qr-code{
+  width: 160px;
+  height: 170px;
+  background-color: #4CAF50;
+  border: 1px solid rgb(255, 219, 154);;
+}
+.qr-code-second{
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
