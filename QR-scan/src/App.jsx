@@ -8,11 +8,11 @@ import Button from './components/Button'
 import QRcode from './components/QRcode'
 function App() {
   const [show, setShow] = useState(true)
-    const [disabledBtn, setDisabledbtn] = useState(false)
+  // const [disabledBtn, setDisabledbtn] = useState(true)
   
-  function setBtnAvailable () {
-    setDisabledbtn(true)
-  }
+  // function setBtnAvailable () {
+  //   setDisabledbtn(true)
+  // }
   function hiddenElement() {
     setShow(false)
   }
@@ -21,10 +21,9 @@ function App() {
   return (
     <div className="container">
     <GenerateComponent>
-    <Button disabledBtn={disabledBtn}>Generate</Button>
+    <Button show={show}>Generate</Button>
     </GenerateComponent>
-      {/* {show && <Spinner/>} */}
-      <QRcode/>
+      {show && <Spinner/>}
     </div>
   )
 }

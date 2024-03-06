@@ -15,7 +15,10 @@ body{
   border-radius: 12px; 
   border: 1px solid rgb(99, 99, 99);
 }
-
+.button.active{
+  background-color: #4CAF50; 
+  cursor: pointer;
+}
 
 .button.disabled {
   background-color: #cccccc; 
@@ -72,7 +75,12 @@ body{
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgb(99, 99, 99);
+  transition: all 2s ease-in-out;
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeAndSlideIn 1s ease forwards; 
 }
+
 .qr-code{
   width: 160px;
   height: 170px;
@@ -85,4 +93,8 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.timer{
+  font-size: 26px;
+  font-weight: bold;
 }
