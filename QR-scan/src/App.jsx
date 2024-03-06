@@ -13,7 +13,11 @@ function App() {
   function setBtnAvailable () {
     setDisabledbtn(true)
   }
- 
+  function hiddenElement() {
+    setShow(false)
+  }
+  setTimeout(hiddenElement, 2000)
+
   return (
     <div className="container">
     <GenerateComponent>
