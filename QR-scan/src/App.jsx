@@ -8,7 +8,7 @@ import Button from './components/Button'
 import QRcode from './components/QRcode'
 function App() {
   const [show, setShow] = useState(true)
-   
+    const [disabledBtn, setDisabledbtn] = useState(false)
   
   function setBtnAvailable () {
     setDisabledbtn(true)
