@@ -24,6 +24,7 @@ function App() {
     <Button show={show}>Generate</Button>
     </GenerateComponent>
       {show && <Spinner/>}
+      {!show &&<QRcode/>}
     </div>
   )
 }
