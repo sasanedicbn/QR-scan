@@ -23,7 +23,7 @@ function App() {
     <GenerateComponent>
     <Button disabledBtn={disabledBtn}>Generate</Button>
     </GenerateComponent>
-  
+      {/* {show && <Spinner/>} */}
       <QRcode/>
     </div>
   )
