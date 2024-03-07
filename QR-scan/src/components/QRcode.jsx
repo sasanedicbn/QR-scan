@@ -7,7 +7,7 @@ function QRcode ({count}) {
     return(
         <div className="qr-container">
             <div className={`qr-code ${showButton ? 'disabled' : 'active'}`}>
-               {showButton ? <Button show={false}>Generate</Button> : null}
+               {showButton ? <Button show={false} >Generate</Button> : null}
             </div>
             <div className="qr-code-second">
                 <Button show={showButton}>Download</Button>
