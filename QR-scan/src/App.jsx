@@ -8,25 +8,23 @@ import QRcode from './components/QRcode'
 function App() {
   const [show, setShow] = useState(true)
   const [count, setCount] = useState(10)
-  if(!show){
-  setTimeout(() => {
-    setCount(count - 1)
-    console.log(count)
-  }, 1000)
-}
-
   function hiddenElement() {
     setShow(false)
   }
   setTimeout(hiddenElement, 2000)
-
+  if(!show && count > 0){
+    setTimeout(() => {
+      setCount(count - 1)
+      console.log(count)
+    }, 1000)
+  }
   return (
     <div className="container">
     <GenerateComponent>
     <Button show={show}>Generate</Button>
     </GenerateComponent>
       {show && <Spinner/>}
-      {!show &&<QRcode />}
+      {!show &&<QRcode count={count} />}
     </div>
   )
 }

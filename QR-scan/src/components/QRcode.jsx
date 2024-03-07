@@ -1,12 +1,12 @@
 import Button from "./Button"
-function QRcode () {
+function QRcode ({count}) {
     return(
         <div className="qr-container">
             <div className="qr-code">
             </div>
             <div className="qr-code-second">
                 <Button>Download</Button>
-                <p className="timer">10</p>
+                <p className="timer">Timer: {count.toString().padStart(2, '0')}</p>
             </div>
         </div>
     )
