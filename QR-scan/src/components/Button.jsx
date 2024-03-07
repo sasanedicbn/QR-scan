@@ -1,12 +1,11 @@
-
 import '../App.css'
 
-const Button = ({children, show, isLoading, setLoading}) => {
+const Button = ({children, show, isLoading, setLoading,resetApp}) => {
     let style = show ? 'disabled' : 'active';
     const handleClick = () => {
         if (!show && !isLoading) {
             setLoading(!isLoading);
-         
+            resetApp()
         }
     };
     return (
