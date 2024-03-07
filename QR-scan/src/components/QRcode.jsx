@@ -1,18 +1,16 @@
 
 import Button from "./Button";
-import { useState } from "react";
 
 function QRcode ({count, setShow}) {
-    const [disabledQR, setDisabledQR] = useState(false);
     const showButton = count === 0;
 
     return(
         <div className="qr-container">
             <div className="qr-code">
-               {showButton ? <Button show={true}>Generate</Button> : null}
+               {showButton ? <Button show={false}>Generate</Button> : null}
             </div>
             <div className="qr-code-second">
-                <Button show={!showButton}>Download</Button>
+                <Button show={showButton}>Download</Button>
                 <p className="timer">Timer: {count.toString().padStart(2, '0')}</p>
             </div>
         </div>
