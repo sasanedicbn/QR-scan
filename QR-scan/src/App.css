@@ -90,11 +90,21 @@ body{
     transform: translateY(0);
   }
 }
+.qr-code.active{
+ background-color: #4CAF50;
+}
+.qr-code.disabled{
+  background-color: red; 
+  cursor: not-allowed; 
+}
 .qr-code{
   width: 160px;
   height: 170px;
   background-color: #4CAF50;
-  border: 1px solid rgb(255, 219, 154);;
+  border: 1px solid rgb(255, 219, 154);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .qr-code-second{
   height: 155px;

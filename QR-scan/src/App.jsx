@@ -7,24 +7,28 @@ import Button from './components/Button'
 import QRcode from './components/QRcode'
 function App() {
   const [show, setShow] = useState(true)
+  const [isLoading, setLoading] = useState(true)
   const [count, setCount] = useState(10)
+  console.log(show)
+  console.log(count)
   function hiddenElement() {
-    setShow(false)
+    setLoading(false)
   }
   setTimeout(hiddenElement, 2000)
-  if(!show && count > 0){
-    setTimeout(() => {
+  clearInterval(hiddenElement)
+
+  if(!isLoading && count > 0){
+     setTimeout(() => {
       setCount(count - 1)
-      console.log(count)
     }, 1000)
   }
+  // clearInterval or cleanTimeout
   return (
     <div className="container">
     <GenerateComponent>
     <Button show={show}>Generate</Button>
     </GenerateComponent>
-      {show && <Spinner/>}
-      {!show &&<QRcode count={count} />}
+      {isLoading ? <Spinner/> : <QRcode  count={count} setShow={setShow} />}
     </div>
   )
 }
