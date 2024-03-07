@@ -16,7 +16,7 @@ body{
   border: 1px solid rgb(99, 99, 99);
 }
 .button.active{
-  background-color: #4CAF50; 
+  background-color: rgb(30, 30, 231); 
   cursor: pointer;
 }
 

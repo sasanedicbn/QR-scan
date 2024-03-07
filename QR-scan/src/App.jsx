@@ -1,5 +1,4 @@
 
-
 import './App.css'
 import { useState } from 'react'
 import GenerateComponent from './components/GenerateComponent'
@@ -8,11 +7,14 @@ import Button from './components/Button'
 import QRcode from './components/QRcode'
 function App() {
   const [show, setShow] = useState(true)
-  // const [disabledBtn, setDisabledbtn] = useState(true)
-  
-  // function setBtnAvailable () {
-  //   setDisabledbtn(true)
-  // }
+  const [count, setCount] = useState(10)
+  if(!show){
+  setTimeout(() => {
+    setCount(count - 1)
+    console.log(count)
+  }, 1000)
+}
+
   function hiddenElement() {
     setShow(false)
   }
@@ -24,7 +26,7 @@ function App() {
     <Button show={show}>Generate</Button>
     </GenerateComponent>
       {show && <Spinner/>}
-      {!show &&<QRcode/>}
+      {!show &&<QRcode />}
     </div>
   )
 }
