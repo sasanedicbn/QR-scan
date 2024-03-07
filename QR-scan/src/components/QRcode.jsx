@@ -1,12 +1,12 @@
 
 import Button from "./Button";
 
-function QRcode ({count, setShow}) {
+function QRcode ({count}) {
     const showButton = count === 0;
 
     return(
         <div className="qr-container">
-            <div className="qr-code">
+            <div className={`qr-code ${showButton ? 'disabled' : 'active'}`}>
                {showButton ? <Button show={false}>Generate</Button> : null}
             </div>
             <div className="qr-code-second">

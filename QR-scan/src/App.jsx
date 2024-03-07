@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState(10)
   console.log(show)
   console.log(count)
+  const showButton = count === 0;
   function hiddenElement() {
     setLoading(false)
   }
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="container">
     <GenerateComponent>
-    <Button show={show}>Generate</Button>
+    <Button show={showButton ? !show : show} >Generate</Button>
     </GenerateComponent>
       {isLoading ? <Spinner/> : <QRcode  count={count} setShow={setShow} />}
     </div>
