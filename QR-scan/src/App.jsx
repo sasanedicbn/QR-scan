@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="container">
     <GenerateComponent>
-    <Button show={showButton ? !show : show} isLoading={isLoading} setLoading={setLoading} >Generate</Button>
+    <Button show={showButton ? !show : show} isLoading={isLoading} setLoading={setLoading} resetApp={resetApp}>Generate</Button>
     </GenerateComponent>
       {isLoading ? <Spinner/> : <QRcode  count={count} setShow={setShow} />}
     </div>
