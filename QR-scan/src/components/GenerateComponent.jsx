@@ -1,8 +1,8 @@
 import '../App.css'
 
-const GenerateComponent = ({children}) => {
+const GenerateComponent = ({children, ...props}) => {
     return(
-        <div className="generate-container">
+        <div {...props}>
         {children}
       </div>
     )
